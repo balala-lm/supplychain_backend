@@ -3,4 +3,25 @@ server:
 
 spring:
   application:
-    name: supplychain-basic 
+    name: supplychain-basic
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_contract?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: WHITEsun13jin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+system:
+  url: http://222.20.126.151:5002/WeBASE-Front
+  evidenceAddress: "0xa96cb642d0a450ea0dbdf6056d50738e46a28fd8"
+
